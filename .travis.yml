@@ -7,10 +7,11 @@ script:
   - docker images mannydesigns/node
 
 before_deploy:
-  - docker login -u joaodamata -p ,?/-S6:y'&i->+U)
+  - docker login -u ${{ secrets.DOCKERHUB_USER }} -p ${{ secrets.DOCKERHUB_PASS }}
 
 deploy:
   provider: script
   script: docker push mannydesigns/node
   on:
     branch: master
+
