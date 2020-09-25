@@ -14,4 +14,3 @@ deploy:
   script: docker push mannydesigns/node
   on:
     branch: master
-
